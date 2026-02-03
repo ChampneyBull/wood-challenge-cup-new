@@ -12,7 +12,7 @@ export default defineConfig(({ command }) => {
   }
 
   if (command !== 'serve') {
-    config.base = './'
+    config.base = '/wood-challenge-cup-new/'
   }
 
   return config
