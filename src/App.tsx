@@ -1,9 +1,17 @@
+import { useState } from 'react';
 import { Layout } from './components/Layout';
 import { Hero } from './components/Hero';
 import { EventCard } from './components/EventCard';
 import { events } from './data/events';
 
 function App() {
+  const [flippedCardYear, setFlippedCardYear] = useState<number | null>(null);
+
+  const handleCardFlip = (year: number) => {
+    // If clicking the same card, flip it back. Otherwise, flip the new card
+    setFlippedCardYear(flippedCardYear === year ? null : year);
+  };
+
   return (
     <Layout>
       <Hero />
@@ -17,7 +25,13 @@ function App() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
           {events.map((event, index) => (
-            <EventCard key={event.year} event={event} index={index} />
+            <EventCard
+              key={event.year}
+              event={event}
+              index={index}
+              isFlipped={flippedCardYear === event.year}
+              onFlip={() => handleCardFlip(event.year)}
+            />
           ))}
         </div>
       </section>

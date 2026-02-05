@@ -1,16 +1,15 @@
 import { motion } from 'framer-motion';
 import { MapPin, Trophy, MapPinned } from 'lucide-react';
-import { useState } from 'react';
 import type { Event } from '../data/events';
 
 interface EventCardProps {
     event: Event;
     index: number;
+    isFlipped: boolean;
+    onFlip: () => void;
 }
 
-export function EventCard({ event, index }: EventCardProps) {
-    const [isFlipped, setIsFlipped] = useState(false);
-
+export function EventCard({ event, index, isFlipped, onFlip }: EventCardProps) {
     return (
         <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -24,13 +23,16 @@ export function EventCard({ event, index }: EventCardProps) {
                 style={{ transformStyle: 'preserve-3d', minHeight: '200px' }}
                 animate={{ rotateY: isFlipped ? 180 : 0 }}
                 transition={{ duration: 0.6, type: 'spring', stiffness: 100 }}
-                onClick={() => setIsFlipped(!isFlipped)}
+                onClick={onFlip}
                 whileHover={{ y: -5, transition: { duration: 0.2 } }}
             >
                 {/* Front of card */}
                 <div
                     className="absolute w-full bg-white dark:bg-slate-900 rounded-xl shadow-md hover:shadow-xl p-6 border-t-4 border-gold-500 transition-shadow duration-300 overflow-hidden group"
-                    style={{ backfaceVisibility: 'hidden' }}
+                    style={{
+                        backfaceVisibility: 'hidden',
+                        WebkitBackfaceVisibility: 'hidden'
+                    }}
                 >
                     <div className="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
                         <Trophy className="w-24 h-24 text-golf-500" />
@@ -59,6 +61,7 @@ export function EventCard({ event, index }: EventCardProps) {
                     className="absolute w-full bg-white dark:bg-slate-900 rounded-xl shadow-md hover:shadow-xl p-6 border-t-4 border-golf-500 transition-shadow duration-300 overflow-hidden group"
                     style={{
                         backfaceVisibility: 'hidden',
+                        WebkitBackfaceVisibility: 'hidden',
                         transform: 'rotateY(180deg)'
                     }}
                 >
