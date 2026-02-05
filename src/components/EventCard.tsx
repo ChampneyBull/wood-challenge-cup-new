@@ -85,11 +85,11 @@ export function EventCard({ event, index, isFlipped, onFlip }: EventCardProps) {
                         </h3>
 
                         {event.courses && event.courses.length > 0 ? (
-                            <div className="space-y-2 flex-1">
+                            <div className="grid grid-cols-2 gap-x-2 gap-y-4 flex-1 mt-2">
                                 {event.courses.map((course, idx) => (
-                                    <div key={idx} className="flex items-start gap-2">
-                                        <MapPinned className="w-4 h-4 text-golf-500 mt-1 flex-shrink-0" />
-                                        <span className="text-sm font-medium text-gray-700 dark:text-gray-300">
+                                    <div key={idx} className="flex flex-col items-center text-center">
+                                        <MapPinned className="w-5 h-5 text-golf-500 mb-1" />
+                                        <span className="text-xs font-semibold text-gray-700 dark:text-gray-300 line-clamp-2">
                                             {course}
                                         </span>
                                     </div>
