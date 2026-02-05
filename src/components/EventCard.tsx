@@ -31,7 +31,9 @@ export function EventCard({ event, index, isFlipped, onFlip }: EventCardProps) {
                     className="absolute w-full bg-white dark:bg-slate-900 rounded-xl shadow-md hover:shadow-xl p-6 border-t-4 border-gold-500 transition-shadow duration-300 overflow-hidden group"
                     style={{
                         backfaceVisibility: 'hidden',
-                        WebkitBackfaceVisibility: 'hidden'
+                        WebkitBackfaceVisibility: 'hidden',
+                        opacity: isFlipped ? 0 : 1,
+                        pointerEvents: isFlipped ? 'none' : 'auto'
                     }}
                 >
                     <div className="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
@@ -62,7 +64,9 @@ export function EventCard({ event, index, isFlipped, onFlip }: EventCardProps) {
                     style={{
                         backfaceVisibility: 'hidden',
                         WebkitBackfaceVisibility: 'hidden',
-                        transform: 'rotateY(180deg)'
+                        transform: 'rotateY(180deg)',
+                        opacity: isFlipped ? 1 : 0,
+                        pointerEvents: isFlipped ? 'auto' : 'none'
                     }}
                 >
                     <div className="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
