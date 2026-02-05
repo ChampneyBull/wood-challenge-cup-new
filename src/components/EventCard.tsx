@@ -16,7 +16,7 @@ export function EventCard({ event, index, isFlipped, onFlip }: EventCardProps) {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-50px" }}
             transition={{ delay: index * 0.05, duration: 0.5 }}
-            style={{ perspective: '1000px' }}
+            style={{ perspective: '1000px', zIndex: isFlipped ? 50 : 0, position: 'relative' }}
         >
             <motion.div
                 className="relative w-full cursor-pointer"
