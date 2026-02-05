@@ -17,12 +17,11 @@ export function EventCard({ event, index }: EventCardProps) {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-50px" }}
             transition={{ delay: index * 0.05, duration: 0.5 }}
-            className="h-full"
             style={{ perspective: '1000px' }}
         >
             <motion.div
-                className="relative w-full h-full cursor-pointer"
-                style={{ transformStyle: 'preserve-3d' }}
+                className="relative w-full cursor-pointer"
+                style={{ transformStyle: 'preserve-3d', minHeight: '200px' }}
                 animate={{ rotateY: isFlipped ? 180 : 0 }}
                 transition={{ duration: 0.6, type: 'spring', stiffness: 100 }}
                 onClick={() => setIsFlipped(!isFlipped)}
@@ -30,7 +29,7 @@ export function EventCard({ event, index }: EventCardProps) {
             >
                 {/* Front of card */}
                 <div
-                    className="absolute w-full h-full bg-white dark:bg-slate-900 rounded-xl shadow-md hover:shadow-xl p-6 border-t-4 border-gold-500 transition-shadow duration-300 overflow-hidden group"
+                    className="absolute w-full bg-white dark:bg-slate-900 rounded-xl shadow-md hover:shadow-xl p-6 border-t-4 border-gold-500 transition-shadow duration-300 overflow-hidden group"
                     style={{ backfaceVisibility: 'hidden' }}
                 >
                     <div className="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
@@ -57,7 +56,7 @@ export function EventCard({ event, index }: EventCardProps) {
 
                 {/* Back of card */}
                 <div
-                    className="absolute w-full h-full bg-white dark:bg-slate-900 rounded-xl shadow-md hover:shadow-xl p-6 border-t-4 border-golf-500 transition-shadow duration-300 overflow-hidden group"
+                    className="absolute w-full bg-white dark:bg-slate-900 rounded-xl shadow-md hover:shadow-xl p-6 border-t-4 border-golf-500 transition-shadow duration-300 overflow-hidden group"
                     style={{
                         backfaceVisibility: 'hidden',
                         transform: 'rotateY(180deg)'
@@ -67,7 +66,7 @@ export function EventCard({ event, index }: EventCardProps) {
                         <MapPinned className="w-24 h-24 text-golf-500" />
                     </div>
 
-                    <div className="relative z-10 h-full flex flex-col">
+                    <div className="relative z-10 flex flex-col">
                         <div className="flex justify-between items-baseline mb-4">
                             <span className="text-3xl font-bold text-gray-200 dark:text-slate-800 group-hover:text-golf-100 dark:group-hover:text-slate-700 transition-colors">
                                 {event.year}
