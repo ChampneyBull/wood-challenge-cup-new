@@ -6,161 +6,161 @@ export interface Event {
 }
 
 export const events: Event[] = [
-    { year: 1999, where: "Ayr", winner: "Steve", courses: [] },
-    { year: 2000, where: "Wales", winner: "Paul", courses: [] },
+    { year: 1999, location: "Ayr", winner: "Steve", courses: [] },
+    { year: 2000, location: "Wales", winner: "Paul", courses: [] },
     {
         year: 2001,
-        where: "Chesterfield",
+        location: "Chesterfield",
         winner: "Paul",
         courses: ["Stanedge GC", "Matlock", "Tapton Park", "Tapton Park"]
     },
     {
         year: 2002,
-        where: "Stratford",
+        location: "Stratford",
         winner: "Mal",
         courses: ["Stratford GC", "Bidford Grange", "Welcombe GC", "Stratford Oaks"]
     },
     {
         year: 2003,
-        where: "Llan",
+        location: "Llan",
         winner: "Richard",
         courses: ["North Wales", "Maesdu", "Rhos on Sea", "Abergele"]
     },
     {
         year: 2004,
-        where: "Ayr",
+        location: "Ayr",
         winner: "Alan",
         courses: ["Thornhills", "Bellisle", "Girvan", "Brampton GC"]
     },
     {
         year: 2005,
-        where: "Tenby",
+        location: "Tenby",
         winner: "Paul",
         courses: ["Haverfordwest", "Trefloyne", "Carmarthen", "Tenby"]
     },
     {
         year: 2006,
-        where: "Chester",
+        location: "Chester",
         winner: "Richard",
         courses: ["Leasowe GC", "Vicars Cross", "Priors Hayes", "Carden Park"]
     },
     {
         year: 2007,
-        where: "Skipton",
+        location: "Skipton",
         winner: "Alan",
         courses: ["Skipton", "Hollins Hall GC"]
     },
     {
         year: 2008,
-        where: "Monmouth",
+        location: "Monmouth",
         winner: "Derek",
         courses: ["Herefordshire", "Alice Springs", "Alice Springs"]
     },
     {
         year: 2009,
-        where: "Derby",
+        location: "Derby",
         winner: "Steve",
         courses: ["Ormonde Fields", "Morley Hayes GC", "Horsley Lodge", "Breadsall Priory"]
     },
     {
         year: 2010,
-        where: "Malvern",
+        location: "Malvern",
         winner: "Mal",
         courses: ["Broadway"]
     },
     {
         year: 2011,
-        where: "Ellesmere",
+        location: "Ellesmere",
         winner: "Richard",
         courses: ["Hawkstone", "Hill Valley"]
     },
     {
         year: 2012,
-        where: "Buxton",
+        location: "Buxton",
         winner: "Derek",
         courses: ["Cavendish", "Leek", "Macclesfield"]
     },
     {
         year: 2013,
-        where: "Lancaster",
+        location: "Lancaster",
         winner: "Richard",
         courses: ["Peover GC?", "Morecambe", "Royal Lancaster", "Fishmere GC"]
     },
     {
         year: 2014,
-        where: "Beaumaris",
+        location: "Beaumaris",
         winner: "Dave",
         courses: ["Bangor", "Henllys", "Nefyn", "Caernarfon"]
     },
     {
         year: 2015,
-        where: "Neath",
+        location: "Neath",
         winner: "Paul",
         courses: ["Neath GC", "Swansea Bay"]
     },
     {
         year: 2016,
-        where: "Shrewsbury",
+        location: "Shrewsbury",
         winner: "Derek",
         courses: ["Shrewsbury", "Arscott", "Church Stretton", "Oswestry"]
     },
     {
         year: 2017,
-        where: "Ripon",
+        location: "Ripon",
         winner: "Dave",
         courses: ["Willow Valley", "Bedale", "Ripon", "Reddish Vale"]
     },
     {
         year: 2018,
-        where: "Market Drayton",
+        location: "Market Drayton",
         winner: "Martin",
         courses: ["Hawkstone", "MacDonald Hill Valley", "Wrekin", "Mile End"]
     },
     {
         year: 2019,
-        where: "Harrogate",
+        location: "Harrogate",
         winner: "Richard",
-        courses: ["Oakdale""Knaresborough", "Rudding Park", "Harrogate"]
+        courses: ["Oakdale", "Knaresborough", "Rudding Park", "Harrogate"]
     },
     {
         year: 2020,
-        where: "Kendal",
+        location: "Kendal",
         winner: "Martin",
         courses: ["Carus Green", "Kendal", "Windermere", "Keswick"]
     },
     {
         year: 2021,
-        where: "Cheltenham",
+        location: "Cheltenham",
         winner: "Aaron",
         courses: ["Tewkesbury Park", "Lilley Brook GC", "Cleeve Hill GC", "Wharton Park"]
     },
     {
         year: 2022,
-        where: "Bakewell",
+        location: "Bakewell",
         winner: "Steve",
         courses: ["Hazel Grove", "Matlock", "Chapel en le Frith", "New Mills"]
     },
     {
         year: 2023,
-        where: "Hebdon Bridge",
+        location: "Hebdon Bridge",
         winner: "Paul",
         courses: ["Crossland Heath", "lightcliffe", "Heaton Park", "Walmsley GC"]
     },
     {
         year: 2024,
-        where: "Lichfield",
+        location: "Lichfield",
         winner: "Martin",
         courses: ["Ingestre Park", "Brocton Hall", "Lilleshall", "Market Drayton"]
     },
     {
         year: 2025,
-        where: "Leeds",
+        location: "Leeds",
         winner: "Martin",
         courses: ["Howley Hall", "Scarcroft", "Moor Allerton", "Rochdale GC"]
     },
     {
         year: 2026,
-        where: "York",
+        location: "York",
         winner: "Aaron",
         courses: ["Huddersfiled GC", "Pike Hikks", "Forest Park", "Wetherby GC"]
     },
