@@ -160,8 +160,8 @@ export const events: Event[] = [
     },
     {
         year: 2026,
-        where: "?",
-        winner: "?",
-        courses: []
+        where: "York",
+        winner: "Aaron",
+        courses: ["Huddersfiled GC", "Pike Hikks", "Forest Park", "Wetherby GC"]
     },
 ].sort((a, b) => b.year - a.year); // Sort by year descending
